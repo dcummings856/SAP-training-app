@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
-const mongoose = require('mongoose')
+const session = require('express-session')
+const MongoStore = require("connect-mongo")
 const PORT = 8000
 const connectDB = require("./config/database")
 const indexRoute = require('./routes/index')
@@ -14,6 +15,15 @@ app.use(express.static('public'))
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: process.env.DB_STRING }),
+  })
+)
 
 app.use('/', indexRoute)
 
