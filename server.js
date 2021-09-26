@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const mongoose = require('mongoose')
 const PORT = 8000
 const connectDB = require("./config/database")
 const indexRoute = require('./routes/index')
