@@ -3,7 +3,7 @@
 Application used to train employees on the movement and navigation of SAP.
 
 # Tools used
-HTML, CSS, Javascript, NodeJS, Express
+HTML, CSS, Javascript, NodeJS, Express, MongoDB/Mongoose
 
 ---
 
