@@ -13,4 +13,4 @@ HTML, CSS, Javascript, NodeJS, Express, MongoDB/Mongoose
 
 ---
 
-## This is not an Official REI application, used in select locations
+## This is not an Official REI application
